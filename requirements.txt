@@ -7,3 +7,4 @@ transformers
 wordcloud
 plotly
 protobuf==3.17.3
+click==7.1.2
