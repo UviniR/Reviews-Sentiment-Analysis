@@ -16,7 +16,8 @@ st.set_page_config(page_title="Review Analysis", page_icon=":smiley:")
 # Add image and heading
 st.image("Header.png", use_column_width=True)
 
-file = st.file_uploader(" ",label_visibility='collapsed',type=["csv"])
+file = st.file_uploader("Upload reviews to analyse", type=["csv"])
+
 
 # Define the app's functionality
 if file is not None:
