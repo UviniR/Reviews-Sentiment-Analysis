@@ -6,3 +6,4 @@ torch
 transformers
 wordcloud
 plotly
+protobuf==3.17.3
