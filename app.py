@@ -85,7 +85,7 @@ if file is not None:
     
     # Create HTML table with no border and centered text
     table_html = (df.style
-                  .set_properties(**{'text-align': 'left','font-size': '16px'})
+                  .set_properties(**{'text-align': 'left','font-size': '14px'})
                   .set_table_styles([{'selector': 'th', 'props': [('border', '0px')]},
                                      {'selector': 'td', 'props': [('border', '0px')]}])
                   .set_table_attributes('style="position: sticky; top: 0;"')
