@@ -104,9 +104,9 @@ if file is not None:
     st.write("<br><br>", unsafe_allow_html=True)
     
     st.download_button(
-        label="Download data as CSV",
-        data=csv,
-        file_name='Review Sentiments.csv'
-    )
+    label="Download data as CSV",
+    data=csv,
+    file_name='Review Sentiments.csv'
+)
 st.write("<br>", unsafe_allow_html=True)
 st.caption('<div style="text-align:center; background-color:#CFEDFF;padding: 6px">crafted with ❤️</div>', unsafe_allow_html=True)
