@@ -90,7 +90,7 @@ if file is not None:
 #                   .set_table_attributes('style="position: sticky; top: 0;"')
 #                   .to_html(index=False, escape=False))
     
-    table_html = df.style..set_table_styles([{'selector': 'th', 'props': [('border', '0px')]},
+    table_html = df.style.set_table_styles([{'selector': 'th', 'props': [('border', '0px')]},
                                              {'selector': 'td', 'props': [('border', '0px')]}]).render()
 
    
