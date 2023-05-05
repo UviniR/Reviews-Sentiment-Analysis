@@ -83,12 +83,14 @@ if file is not None:
     max_rows = 15
     
     # Create HTML table with no border and centered text
-    table_html = (df.style
-                  .set_properties(**{'text-align': 'left','font-size': '14px'})
-                  .set_table_styles([{'selector': 'th', 'props': [('border', '0px')]},
-                                     {'selector': 'td', 'props': [('border', '0px')]}])
-                  .set_table_attributes('style="position: sticky; top: 0;"')
-                  .to_html(index=False, escape=False))
+#     table_html = (df.style
+#                   .set_properties(**{'text-align': 'left','font-size': '14px'})
+#                   .set_table_styles([{'selector': 'th', 'props': [('border', '0px')]},
+#                                      {'selector': 'td', 'props': [('border', '0px')]}])
+#                   .set_table_attributes('style="position: sticky; top: 0;"')
+#                   .to_html(index=False, escape=False))
+    
+    table_html = df.style.hide_index().to_html()
     
     # Wrap the table inside a div with a fixed height and scrollable content
     st.write(f'<div style="height: {max_rows*30}px; overflow-y: scroll;">{table_html}</div>', unsafe_allow_html=True,header=True,sticky_header=True)
