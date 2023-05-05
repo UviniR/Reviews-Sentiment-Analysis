@@ -27,7 +27,7 @@ if file is not None:
     
     # Write the total number of records
     st.markdown(
-        f'<div style="background-color: #4AA6DD; color: #ffffff; padding: 6px; font-size: 16px; font-family: sans-serif; font-weight: bold; text-align: center; border-radius: 1rem;margin-top: 10px"> Distribution of Reviews </div>',
+        f'<div style="background-color: #4AA6DD; color: #ffffff; padding: 6px; font-size: 16px;font-weight: bold; text-align: center; border-radius: 1rem;margin-top: 10px"> Distribution of Reviews </div>',
         unsafe_allow_html=True
     )
 
@@ -53,7 +53,7 @@ if file is not None:
     
     with col1:
         st.markdown(
-            f'<div style="background-color: #4AA6DD; color: #ffffff; padding: 6px; font-size: 16px; font-family: sans-serif; font-weight: bold; text-align: center; margin-bottom: 40px; border-radius: 1rem">Positive Reviews</div>',
+            f'<div style="background-color: #4AA6DD; color: #ffffff; padding: 6px; font-size: 16px;font-weight: bold; text-align: center; margin-bottom: 40px; border-radius: 1rem">Positive Reviews</div>',
             unsafe_allow_html=True
         )
         wc_pos = WordCloud(width=800, height=600, background_color="white", colormap="winter").generate(positive_reviews)
@@ -61,7 +61,7 @@ if file is not None:
     
     with col2:
         st.markdown(
-            f'<div style="background-color: #4AA6DD; color: #ffffff; padding: 6px; font-size: 16px; font-family: sans-serif; font-weight: bold; text-align: center; margin-bottom: 40px;border-radius: 1rem">Negative Reviews</div>',
+            f'<div style="background-color: #4AA6DD; color: #ffffff; padding: 6px; font-size: 16px;font-weight: bold; text-align: center; margin-bottom: 40px;border-radius: 1rem">Negative Reviews</div>',
             unsafe_allow_html=True
         )
         wc_neg = WordCloud(width=800, height=600, background_color="white", colormap="winter").generate(negative_reviews)
@@ -69,7 +69,7 @@ if file is not None:
 
     # Display the sentiment of each review as cards
     st.markdown(
-        f'<div style="background-color: #4AA6DD; color: #ffffff; padding: 6px; font-size: 16px; font-family: sans-serif; font-weight: bold; text-align: center; margin-top: 60px; border-radius: 1rem"> Reviews in depth </div>',
+        f'<div style="background-color: #4AA6DD; color: #ffffff; padding: 6px; font-size: 16px;font-weight: bold; text-align: center; margin-top: 60px; border-radius: 1rem"> Reviews in depth </div>',
         unsafe_allow_html=True
     )
 
@@ -85,7 +85,7 @@ if file is not None:
     
     # Create HTML table with no border and centered text
     table_html = (df.style
-                  .set_properties(**{'text-align': 'left','font-family': 'sans-serif'})
+                  .set_properties(**{'text-align': 'left','font-size': '16px'})
                   .set_table_styles([{'selector': 'th', 'props': [('border', '0px')]},
                                      {'selector': 'td', 'props': [('border', '0px')]}])
                   .set_table_attributes('style="position: sticky; top: 0;"')
