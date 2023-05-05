@@ -16,8 +16,7 @@ st.set_page_config(page_title="Review Analysis", page_icon=":smiley:")
 # Add image and heading
 st.image("Header.png", use_column_width=True)
 
-file = st.file_uploader("Upload reviews to analyse", type=["csv"])
-
+file = st.file_uploader(" ",label_visibility='collapsed',type=["csv"])
 
 # Define the app's functionality
 if file is not None:
@@ -27,7 +26,7 @@ if file is not None:
     
     # Write the total number of records
     st.markdown(
-        f'<div style="background-color: #4AA6DD; color: #ffffff; padding: 6px; font-size: 16px;font-weight: bold; text-align: center; border-radius: 1rem;margin-top: 10px"> Distribution of Reviews </div>',
+        f'<div style="background-color: #4AA6DD; color: #ffffff; padding: 6px; font-size: 16px; font-weight: bold; text-align: center; border-radius: 1rem;margin-top: 10px"> Distribution of Reviews </div>',
         unsafe_allow_html=True
     )
 
@@ -53,7 +52,7 @@ if file is not None:
     
     with col1:
         st.markdown(
-            f'<div style="background-color: #4AA6DD; color: #ffffff; padding: 6px; font-size: 16px;font-weight: bold; text-align: center; margin-bottom: 40px; border-radius: 1rem">Positive Reviews</div>',
+            f'<div style="background-color: #4AA6DD; color: #ffffff; padding: 6px; font-size: 16px; font-weight: bold; text-align: center; margin-bottom: 40px; border-radius: 1rem">Positive Reviews</div>',
             unsafe_allow_html=True
         )
         wc_pos = WordCloud(width=800, height=600, background_color="white", colormap="winter").generate(positive_reviews)
@@ -61,7 +60,7 @@ if file is not None:
     
     with col2:
         st.markdown(
-            f'<div style="background-color: #4AA6DD; color: #ffffff; padding: 6px; font-size: 16px;font-weight: bold; text-align: center; margin-bottom: 40px;border-radius: 1rem">Negative Reviews</div>',
+            f'<div style="background-color: #4AA6DD; color: #ffffff; padding: 6px; font-size: 16px; font-weight: bold; text-align: center; margin-bottom: 40px;border-radius: 1rem">Negative Reviews</div>',
             unsafe_allow_html=True
         )
         wc_neg = WordCloud(width=800, height=600, background_color="white", colormap="winter").generate(negative_reviews)
@@ -69,7 +68,7 @@ if file is not None:
 
     # Display the sentiment of each review as cards
     st.markdown(
-        f'<div style="background-color: #4AA6DD; color: #ffffff; padding: 6px; font-size: 16px;font-weight: bold; text-align: center; margin-top: 60px; border-radius: 1rem"> Reviews in depth </div>',
+        f'<div style="background-color: #4AA6DD; color: #ffffff; padding: 6px; font-size: 16px; font-weight: bold; text-align: center; margin-top: 60px; border-radius: 1rem"> Reviews in depth </div>',
         unsafe_allow_html=True
     )
 
@@ -104,9 +103,9 @@ if file is not None:
     st.write("<br><br>", unsafe_allow_html=True)
     
     st.download_button(
-    label="Download data as CSV",
-    data=csv,
-    file_name='Review Sentiments.csv'
-)
+        label="Download data as CSV",
+        data=csv,
+        file_name='Review Sentiments.csv'
+    )
 st.write("<br>", unsafe_allow_html=True)
 st.caption('<div style="text-align:center; background-color:#CFEDFF;padding: 6px">crafted with ❤️</div>', unsafe_allow_html=True)
