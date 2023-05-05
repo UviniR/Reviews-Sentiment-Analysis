@@ -6,6 +6,8 @@ import plotly.graph_objs as go
 from wordcloud import WordCloud
 from transformers import pipeline
 
+@st.cache
+
 # Load the pre-trained sentiment analysis model
 sentiment_model = pipeline("sentiment-analysis", model="distilbert-base-uncased-finetuned-sst-2-english")
 
