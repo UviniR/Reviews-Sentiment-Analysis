@@ -11,7 +11,7 @@ sentiment_model = pipeline("sentiment-analysis", model="distilbert-base-uncased-
 
 # Define the Streamlit app's user interface
 # Set page title and favicon
-st.set_page_config(page_title="Review Analysis", page_icon=":smiley:")
+st.set_page_config(page_title="Hotel Reviews Sentiment", page_icon=":hotel:",layout='wide')
 
 # Add image and heading
 st.image("Header.png", use_column_width=True)
