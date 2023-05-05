@@ -90,7 +90,9 @@ if file is not None:
 #                   .set_table_attributes('style="position: sticky; top: 0;"')
 #                   .to_html(index=False, escape=False))
     
-    table_html = df.style.render()
+    table_html = df.style.set_table_styles([{ 'selector': 'table',    'props': [('border', '0'), ('border-collapse', 'collapse')]
+}]).render()
+
     
     # Wrap the table inside a div with a fixed height and scrollable content
     st.write(f'<div style="height: {max_rows*30}px; overflow-y: scroll;">{table_html}</div>', unsafe_allow_html=True,header=True,sticky_header=True)
@@ -110,4 +112,6 @@ if file is not None:
         file_name='Review Sentiments.csv'
     )
 st.write("<br>", unsafe_allow_html=True)
-st.caption('<div style="text-align:center; background-color:#CFEDFF;padding: 6px">crafted with ❤️</div>', unsafe_allow_html=True)
+#st.caption('<div style="text-align:center; background-color:#CFEDFF;padding: 6px">crafted with ❤️</div>', unsafe_allow_html=True)
+st.write('<div style="text-align:center; background-color:#CFEDFF;padding: 6px">crafted with ❤️</div>', unsafe_allow_html=True)
+
