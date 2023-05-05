@@ -90,10 +90,10 @@ if file is not None:
 #                   .set_table_attributes('style="position: sticky; top: 0;"')
 #                   .to_html(index=False, escape=False))
     
-    table_html = df.style.set_table_styles([{ 'selector': 'table',    'props': [('border', 'none'), ('border-collapse', 'collapse')]
-}]).render()
+    table_html = df.style..set_table_styles([{'selector': 'th', 'props': [('border', '0px')]},
+                                             {'selector': 'td', 'props': [('border', '0px')]}]).render()
 
-    
+   
     # Wrap the table inside a div with a fixed height and scrollable content
     st.write(f'<div style="height: {max_rows*30}px; overflow-y: scroll;">{table_html}</div>', unsafe_allow_html=True,header=True,sticky_header=True)
 
