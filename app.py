@@ -113,5 +113,5 @@ if file is not None:
     )
 st.write("<br>", unsafe_allow_html=True)
 #st.caption('<div style="text-align:center; background-color:#CFEDFF;padding: 6px">crafted with ❤️</div>', unsafe_allow_html=True)
-st.write('<div style="text-align:center; background-color:#CFEDFF;padding: 6px";font-size:10px>crafted with ❤️</div>', unsafe_allow_html=True)
+st.write('<div style="text-align:center; background-color:#CFEDFF;padding: 6px;font-size:10px;">crafted with ❤️</div>', unsafe_allow_html=True)
 
