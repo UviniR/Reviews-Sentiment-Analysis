@@ -7,9 +7,14 @@ from wordcloud import WordCloud
 from transformers import pipeline
 
 @st.cache
+def load_sentiment_model():
+    # Load the pre-trained sentiment analysis model
+    sentiment_model = pipeline("sentiment-analysis", model="distilbert-base-uncased-finetuned-sst-2-english")
+    return sentiment_model
 
-# Load the pre-trained sentiment analysis model
-sentiment_model = pipeline("sentiment-analysis", model="distilbert-base-uncased-finetuned-sst-2-english")
+
+# Load the model
+sentiment_model = load_sentiment_model()
 
 # Define the Streamlit app's user interface
 # Set page title and favicon
