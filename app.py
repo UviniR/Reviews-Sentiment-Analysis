@@ -28,7 +28,7 @@ file = st.file_uploader("",type=["csv"])
 if file is not None:
     # Read the CSV file into a Pandas DataFrame
     df = pd.read_csv(file)
-    st.markdown(f"<h5 style='font-family: sans-serif;margin-top:40px'>Total reviews: {len(df)-1} </h5>", unsafe_allow_html=True)
+    st.markdown(f"<h5 style='font-family: sans-serif;margin-top:40px'>Total reviews: {len(df)} </h5>", unsafe_allow_html=True)
     
     # Write the total number of records
     st.markdown(
@@ -110,7 +110,7 @@ if file is not None:
     csv = convert_df(df)
     
     # Add some space between the download button and the table
-    st.write("<br><br>", unsafe_allow_html=True)
+    st.write("<br>", unsafe_allow_html=True)
     
     st.download_button(
         label="Download data as CSV",
