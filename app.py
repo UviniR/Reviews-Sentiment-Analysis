@@ -17,10 +17,9 @@ st.set_page_config(page_title="Hotel Reviews Sentiment", page_icon=":hotel:",lay
 # Add image and heading
 st.image("Header.png", use_column_width=True)
 
-
-
+st.write("<br>", unsafe_allow_html=True)
 file_format_link = "https://drive.google.com/file/d/1B6Glpna9kZsakgjpWStfhbxI20EoGsnv/view?usp=sharing"
-message = f"ℹ️ Please stick to the given layout when uploading the csv. Download the sample layout from [here]({file_format_link})."
+message = f"ℹ️  Please stick to the given layout when uploading the csv. Download the sample layout from [here]({file_format_link})."
 st.write(message)
 
 file = st.file_uploader("",type=["csv"])
