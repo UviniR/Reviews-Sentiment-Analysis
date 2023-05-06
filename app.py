@@ -19,7 +19,7 @@ st.image("Header.png", use_column_width=True)
 
 st.write("<br>", unsafe_allow_html=True)
 file_format_link = "https://drive.google.com/file/d/1B6Glpna9kZsakgjpWStfhbxI20EoGsnv/view?usp=sharing"
-message = f"ℹ️ㅤPlease stick to the given layout when uploading the file. You can download the sample layout from [here]({file_format_link})."
+message = f"⚠️ㅤPlease stick to the given layout when uploading the file. You can download the sample file layout from [here]({file_format_link})."
 st.write(message)
 
 file = st.file_uploader("",type=["csv"])
