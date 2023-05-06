@@ -86,7 +86,7 @@ if file is not None:
         df = df[df['Sentiment'] == filter_sentiment]
     
     # Set the max number of rows to display at a time
-    max_rows = 15
+    max_rows = 10
     
     # Create HTML table with no border and centered text
 #     table_html = (df.style
