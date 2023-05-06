@@ -111,21 +111,7 @@ if file is not None:
     
     # Add some space between the download button and the table
     st.write("<br><br>", unsafe_allow_html=True)
-    # Add a placeholder for the button
-    download_placeholder = st.empty()
-
-    # Apply CSS styling to right-align the button
-    download_placeholder.markdown(
-        """
-        <style>
-        .stButton > button {
-            float: right;
-        }
-        </style>
-        """,
-        unsafe_allow_html=True
-    )
-
+    
     st.download_button(
         label="Download data as CSV",
         data=csv,
