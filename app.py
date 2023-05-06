@@ -25,6 +25,7 @@ with h1:
     message = f"Please stick to the given layout when uploading the csv. Download the sample layout from [here]({file_format_link})."
     st.info(message,icon="ℹ️")
 with h2:
+    st.write("hi")
     file = st.file_uploader("Drop your file to analyse 💻",type=["csv"])
 
 
