@@ -26,7 +26,7 @@ with h1:
     message = f"Please stick to the given layout when uploading the csv. Download the sample layout from [here]({file_format_link})."
     st.info(message,icon="ℹ️")
 with h2:
-    file = st.file_uploader("Upload reviews here",type=["csv"])
+    file = st.file_uploader(" ",type=["csv"])
 
 # Define the app's functionality
 if file is not None:
