@@ -30,7 +30,7 @@ st.image("Header.png", use_column_width=True)
 # import streamlit as st
 
 # # Center-align the word clouds
-# h1, h2 = st.columns(2)
+h1, h2 = st.columns(2)
 
 with h1:
     # Add the message with a hyperlink
