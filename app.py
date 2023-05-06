@@ -84,10 +84,8 @@ if file is not None:
     # Table generation
     table_html = df.style.set_table_styles([{'selector': 'th', 'props': [('border', '0px')]},
                                              {'selector': 'td', 'props': [('border', '0px')]}]).render()
-    # Scrollable content
-    st.write(f'<div style="height: {max_rows*30}px; overflow-y: scroll;">{table_html}</div>', unsafe_allow_html=True,header=True,sticky_header=True)
-
-    # --- This section should be replaced for the above table generation when deploying the model on Hugging Face Space ---
+    
+       # --- This section should be replaced for the above table generation when deploying the model on Hugging Face Space ---
 #     table_html = (df.style
 #                   .set_properties(**{'text-align': 'left','font-size': '14px'})
 #                   .set_table_styles([{'selector': 'th', 'props': [('border', '0px')]},
@@ -95,6 +93,9 @@ if file is not None:
 #                   .set_table_attributes('style="position: sticky; top: 0;"')
 #                   .to_html(index=False, escape=False))
     
+    # Scrollable content
+    st.write(f'<div style="height: {max_rows*30}px; overflow-y: scroll;">{table_html}</div>', unsafe_allow_html=True,header=True,sticky_header=True)
+
     # save output as csv
     def convert_df(df):
         return df.to_csv().encode('utf-8')
