@@ -17,9 +17,11 @@ st.set_page_config(page_title="Hotel Reviews Sentiment", page_icon=":hotel:",lay
 # Add image and heading
 st.image("Header.png", use_column_width=True)
 
+st.info('Please follow the given file fromat to upload the reviews', icon="ℹ️")
+
 # Add a message with the file layout and download link
 file_layout_link = "https://docs.google.com/spreadsheets/d/1A0YsxBQ-aglSxL7oFdAjkGc21kOSgsR5OB4GcBDOCGQ/edit?usp=sharing"
-st.markdown(f"[Download file layout]({file_layout_link})")
+st.markdown(f"[View sample layout]({file_layout_link})")
 
 file = st.file_uploader(" ",type=["csv"])
 
