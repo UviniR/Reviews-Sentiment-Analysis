@@ -20,7 +20,7 @@ st.image("Header.png", use_column_width=True)
 h1, h2 = st.columns(2)
 with h1:
 # Add the message with a hyperlink
-    st.write("<br>", unsafe_allow_html=True)
+    st.write("hi")
     file_format_link = "https://drive.google.com/file/d/1B6Glpna9kZsakgjpWStfhbxI20EoGsnv/view?usp=sharing"
     message = f"Please stick to the given layout when uploading the csv. Download the sample layout from [here]({file_format_link})."
     st.info(message,icon="ℹ️")
