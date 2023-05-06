@@ -22,9 +22,6 @@ st.markdown("Please download the file layout from the link below:")
 file_layout_link = "https://docs.google.com/spreadsheets/d/1A0YsxBQ-aglSxL7oFdAjkGc21kOSgsR5OB4GcBDOCGQ/edit?usp=sharing"
 st.markdown(f"[Download File Layout]({file_layout_link})")
 
-# Display a message with the download link and file upload
-st.write("Please upload your file with the following layout:")
-download_sample_layout()
 file = st.file_uploader(" ",type=["csv"])
 
 # Define the app's functionality
