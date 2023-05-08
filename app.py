@@ -111,9 +111,9 @@ if file is not None:
     
 # Footnote
 st.write("<br>", unsafe_allow_html=True)
-st.write('<div style="text-align:center; color:#52565E; background-color:#D1FFE5; padding: 6px;font-size:14px;">crafted with ❤️</div>', unsafe_allow_html=True)
+st.write('<div style="text-align:center; color:#52565E; background-color:#C4D6CC; padding: 6px;font-size:14px;">crafted with ❤️</div>', unsafe_allow_html=True)
 
     # --- This section should be replaced for the above table generation when deploying the model on Hugging Face Space ---
-#st.caption('<div style="text-align:center; background-color:#D1FFE5;padding: 6px">crafted with ❤️</div>', unsafe_allow_html=True)
+#st.caption('<div style="text-align:center; background-color:#C4D6CC;padding: 6px">crafted with ❤️</div>', unsafe_allow_html=True)
 
 # --- End of the code ---
