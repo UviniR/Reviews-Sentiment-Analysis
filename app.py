@@ -32,7 +32,7 @@ if file is not None:
     st.markdown(f"<h5 style='font-family: sans-serif;margin-top:40px'>Total reviews: {len(df)} </h5>", unsafe_allow_html=True)
     
     st.markdown(
-        f'<div style="background-color: #4AA6DD; color: #ffffff; padding: 6px; font-size: 20px; font-weight: bold; text-align: center; border-radius: 1rem;margin-top: 10px"> Distribution of Reviews </div>',
+        f'<div style="background-color: #2C6E49; color: #ffffff; padding: 6px; font-size: 20px; font-weight: bold; text-align: center; border-radius: 1rem;margin-top: 10px"> Distribution of Reviews </div>',
         unsafe_allow_html=True
     )
 
@@ -55,14 +55,14 @@ if file is not None:
     col1, col2 = st.columns(2)
     with col1:
         st.markdown(
-            f'<div style="background-color: #4AA6DD; color: #ffffff; padding: 6px; font-size: 20px; font-weight: bold; text-align: center; margin-bottom: 40px; border-radius: 1rem">Positive Reviews</div>',
+            f'<div style="background-color: #2C6E49; color: #ffffff; padding: 6px; font-size: 20px; font-weight: bold; text-align: center; margin-bottom: 40px; border-radius: 1rem">Positive Reviews</div>',
             unsafe_allow_html=True
         )
         wc_pos = WordCloud(width=800, height=600, background_color="white", colormap="winter").generate(positive_reviews)
         st.image(wc_pos.to_array(),use_column_width=True)
     with col2:
         st.markdown(
-            f'<div style="background-color: #4AA6DD; color: #ffffff; padding: 6px; font-size: 20px; font-weight: bold; text-align: center; margin-bottom: 40px;border-radius: 1rem">Negative Reviews</div>',
+            f'<div style="background-color: #2C6E49; color: #ffffff; padding: 6px; font-size: 20px; font-weight: bold; text-align: center; margin-bottom: 40px;border-radius: 1rem">Negative Reviews</div>',
             unsafe_allow_html=True
         )
         wc_neg = WordCloud(width=800, height=600, background_color="white", colormap="winter").generate(negative_reviews)
@@ -70,7 +70,7 @@ if file is not None:
 
     # Display the sentiment of each review as a dataframe
     st.markdown(
-        f'<div style="background-color: #4AA6DD; color: #ffffff; padding: 6px; font-size: 20px; font-weight: bold; text-align: center; margin-top: 60px; border-radius: 1rem"> Reviews in depth </div>',
+        f'<div style="background-color: #2C6E49; color: #ffffff; padding: 6px; font-size: 20px; font-weight: bold; text-align: center; margin-top: 60px; border-radius: 1rem"> Reviews in depth </div>',
         unsafe_allow_html=True
     )
     # Add a filter for sentiments
@@ -111,9 +111,9 @@ if file is not None:
     
 # Footnote
 st.write("<br>", unsafe_allow_html=True)
-st.write('<div style="text-align:center; color:#52565E; background-color:#CFEDFF;padding: 6px;font-size:14px;">crafted with ❤️</div>', unsafe_allow_html=True)
+st.write('<div style="text-align:center; color:#52565E; background-color:#D1FFE5;padding: 6px;font-size:14px;">crafted with ❤️</div>', unsafe_allow_html=True)
 
     # --- This section should be replaced for the above table generation when deploying the model on Hugging Face Space ---
-#st.caption('<div style="text-align:center; background-color:#CFEDFF;padding: 6px">crafted with ❤️</div>', unsafe_allow_html=True)
+#st.caption('<div style="text-align:center; background-color:#D1FFE5;padding: 6px">crafted with ❤️</div>', unsafe_allow_html=True)
 
 # --- End of the code ---
