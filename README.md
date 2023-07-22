@@ -1,5 +1,5 @@
 # Sentiment Analysis of Customer Reviews 🏨
-
+[View the app on HuggingFace](https://huggingface.co/spaces/Uvini/Hotel-Reviews)
 An ML model fine-tuned for sentiment analysis of hotel reviews of a selected hotel in Sri Lanka. Moreover to give added value to the business, a simple app has been designed using [streamlit](https://streamlit.io) to deploy the model. As a test run, the base model before fine-tuning for the custom dataset has been deployed on a space, and you can view it [here](https://huggingface.co/distilbert-base-uncased-finetuned-sst-2-english).
 
 ### ▶️ About the base model
